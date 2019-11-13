@@ -3,8 +3,21 @@
 public class ac : MonoBehaviour
 {//地板
     [Header("地板")]
-    [Range(1,5)]
+    [Range(0.5f,100f)]
     [Tooltip("地板")]
-   public int floor = 9999;
+   public float floor = 1.5f;
+
+    public Transform aa;
+
+
+    private void Update()
+   {
+
+        aa.Translate(-floor,0,0);
+
+    }
+   
+        
+    
 
 }
