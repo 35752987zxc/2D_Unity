@@ -9,4 +9,26 @@ public class Ad : MonoBehaviour
     [Header("是否死亡")]
     [Tooltip("是否死亡")]
     public bool Whetheritisdead;
+
+    /// <summary>
+    /// 跳躍
+    /// </summary>
+    private void jump()
+    {
+
+    }
+    /// <summary>
+    /// 死亡
+    /// </summary>
+    private void whd()
+    {
+
+    }
+    /// <summary>
+    /// 水管
+    /// </summary>
+    private void gjo( )
+    {
+
+    }
 }
