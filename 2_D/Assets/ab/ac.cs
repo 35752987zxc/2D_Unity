@@ -12,8 +12,7 @@ public class ac : MonoBehaviour
 
     private void Update()
    {
-
-        aa.Translate(-floor,0,0);
+        Floor();
 
     }
     /// <summary>
@@ -22,6 +21,7 @@ public class ac : MonoBehaviour
     private void Floor()
     {
 
+        aa.Translate(-floor * Time.deltaTime,0,0);
     }
    
         
