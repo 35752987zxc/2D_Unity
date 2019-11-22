@@ -1460,6 +1460,8 @@ GameObject:
   - component: {fileID: 1571974267}
   - component: {fileID: 1571974269}
   - component: {fileID: 1571974270}
+  - component: {fileID: 1571974271}
+  - component: {fileID: 1571974272}
   m_Layer: 0
   m_Name: 123
   m_TagString: Untagged
@@ -1519,6 +1521,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ad: {fileID: 111455204}
+--- !u!114 &1571974271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571974266}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0ed4d7cb485f84b9bd139d968a0a32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a: 10
+  b: 3
+--- !u!114 &1571974272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571974266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3b13aeeac82fd4e846f552ffe98a52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gh: 1
+  scor: 55
+  combo: 50
 --- !u!1 &1899625389
 GameObject:
   m_ObjectHideFlags: 0
