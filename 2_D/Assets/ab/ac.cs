@@ -2,10 +2,10 @@
 
 public class ac : MonoBehaviour
 {//地板
-    [Header("地板")]
-    [Range(0.1f,100f)]
-    [Tooltip("地板")]
-   public float floor = 1.5f;
+   // [Header("地板")]
+   // [Range(0.1f,100f)]
+    //[Tooltip("地板")]
+   public static float floor = 4f;
 
     public Transform aa;
 

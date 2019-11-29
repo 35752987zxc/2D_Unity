@@ -16,6 +16,13 @@ public class Ad : MonoBehaviour
 
     public Rigidbody2D R2d;
 
+    public GM gm;
+    [Header("音效")]
+    public AudioSource aud;
+    public AudioClip wul;
+    public AudioClip n3;
+    public AudioClip j;
+
     private void Update()
     {
         jump();
@@ -29,7 +36,22 @@ public class Ad : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        whd();
+        if (collision.gameObject.name == "04_水管"|| collision.gameObject.name == "04_水管 (1)")
+        {
+            whd();
+            
+        }
+        
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "通過")
+        {
+
+            gm.opt();
+            gjo();
+        }
     }
 
     /// <summary>
@@ -46,7 +68,7 @@ public class Ad : MonoBehaviour
             R2d.Sleep();
             R2d.gravityScale = 1.5f;
             R2d.AddForce(new Vector2 (0, Jumpheight));
-            
+            aud.PlayOneShot(wul);
         }
         R2d.SetRotation(asd * R2d.velocity.y);
     }
@@ -56,12 +78,16 @@ public class Ad : MonoBehaviour
     private void whd()
     {
         Whetheritisdead = true;
+        gm.gg();
+        ac.floor = 0;
+        aud.PlayOneShot(n3);
+
     }
     /// <summary>
     /// 水管
     /// </summary>
     private void gjo( )
     {
-
+        aud.PlayOneShot(j);
     }
 }

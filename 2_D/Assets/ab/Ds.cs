@@ -2,7 +2,8 @@
 
 public class Ds : ac
 {
-    private void Start()
+
+    private void OnBecameInvisible()
     {
         Destroy(gameObject, 2.3f);
     }

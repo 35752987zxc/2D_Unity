@@ -8,6 +8,9 @@ public class GM : MonoBehaviour
     public int optimal;
     [Header("水管")]
     public GameObject pipe;
+    [Header("結束")]
+    public GameObject g;
+
 
     /// <summary>
     /// 加分
@@ -20,16 +23,18 @@ public class GM : MonoBehaviour
     /// <summary>
     /// 最佳
     /// </summary>
-    private void opt()
+    public void opt()
     {
-
+        print("1");
     }
     /// <summary>
     /// 結束
     /// </summary>
-    private void gg()
+    public void gg()
     {
-
+        g.SetActive(true);
+        CancelInvoke("spawnpipe");
+        
     }
     /// <summary>
     /// 水管
