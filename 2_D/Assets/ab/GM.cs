@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GM : MonoBehaviour
 {   //GM
@@ -11,21 +13,30 @@ public class GM : MonoBehaviour
     [Header("結束")]
     public GameObject g;
 
+    public Text textScore;
+    public Text textop;
+
 
     /// <summary>
     /// 加分
     /// </summary>
     /// <param name="add">添加為1</param>
-    private void aS( int add = 1)
+    public void ass( int add = 1)
     {
+        fraction = fraction + add;
+        textScore.text = fraction.ToString();
 
+        opt();
     }
     /// <summary>
     /// 最佳
     /// </summary>
     public void opt()
     {
-        print("1");
+        if (fraction > optimal)
+        {
+            PlayerPrefs.SetInt("最佳", fraction);
+        }
     }
     /// <summary>
     /// 結束
@@ -35,6 +46,20 @@ public class GM : MonoBehaviour
         g.SetActive(true);
         CancelInvoke("spawnpipe");
         
+    }
+    /// <summary>
+    /// 重來
+    /// </summary>
+    public void repaly()
+    {
+        SceneManager.LoadScene("遊戲場景");
+    }
+    /// <summary>
+    /// 離開
+    /// </summary>
+    public void exit()
+    {
+        Application.Quit();
     }
     /// <summary>
     /// 水管
@@ -50,6 +75,9 @@ public class GM : MonoBehaviour
 
         // spawnpipe();
         InvokeRepeating("spawnpipe", 0, 1.5f);
+        optimal = PlayerPrefs.GetInt("最佳");
+
+        textop.text = optimal.ToString();
 
 
     }

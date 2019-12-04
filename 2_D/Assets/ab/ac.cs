@@ -15,6 +15,10 @@ public class ac : MonoBehaviour
         Floor();
 
     }
+    private void Start()
+    {
+        floor = 4f;
+    }
     /// <summary>
     /// 地板
     /// </summary>

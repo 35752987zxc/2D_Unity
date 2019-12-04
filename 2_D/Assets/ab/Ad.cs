@@ -23,6 +23,11 @@ public class Ad : MonoBehaviour
     public AudioClip n3;
     public AudioClip j;
 
+    private void Start()
+    {
+        Screen.SetResolution(600, 800, false);
+    }
+
     private void Update()
     {
         jump();
@@ -46,11 +51,12 @@ public class Ad : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "通過")
+        if (collision.gameObject.name == "通過"&& !Whetheritisdead)
         {
 
             gm.opt();
             gjo();
+            gm.ass ();
         }
     }
 
@@ -77,6 +83,7 @@ public class Ad : MonoBehaviour
     /// </summary>
     private void whd()
     {
+        if (Whetheritisdead) return;
         Whetheritisdead = true;
         gm.gg();
         ac.floor = 0;
